@@ -21,6 +21,13 @@ class Programmes{
             callback(result)
         })
     }
+    static updateOne(title,content,id, callback){
+        let SQL = "UPDATE programmes_tb SET title=?,context=? WHERE id=?"
+        db.query(SQL, [title,content,id], (err, result)=>{
+            if(err) throw err
+            callback(result)
+        })
+    }
 }
 
 module.exports = Programmes
