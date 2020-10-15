@@ -3,6 +3,7 @@ const exp = require('express')
 const bp = require('body-parser')
 const {success, error} = require('consola')
 const router = require('./routes/programmes')
+const PastorsEndpoint = require('./routes/Pastors')
 const db = require('./models/')
 const app = exp()
 const PORT = process.env.PORT || 7000
@@ -16,7 +17,14 @@ app.use(bp.json())
 app.use(bp.urlencoded({extended: false}))
 
 app.use('/programmes', router)
+app.use('/pastors', PastorsEndpoint)
 
+app.get('/', (req,res)=>{
+    res.json("Main endpoint /")
+})
+app.use((req, res, next)=>{
+    res.status(404).json({message: "Page not found"})
+})
 app.listen(PORT, (err)=>{
     if(err) error({message: `${err}`, badge: true})
     success({message: `Server run on port ${PORT}`, badge: true})

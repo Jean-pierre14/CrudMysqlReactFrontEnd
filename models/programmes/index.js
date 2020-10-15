@@ -1,5 +1,13 @@
 const db = require('../')
 class Programmes{
+    
+    static find(callback){
+        let SQL = "SELECT user_account.id, pastor_tb.pastor_name,pastor_tb.user_id, user_account.create_at FROM user_account INNER JOIN pastor_tb ON user_account.id=pastor_tb.user_id"
+        db.query(SQL, (err, result)=>{
+        if(err) throw err
+        callback(result)
+    })
+    }
     static findAll(callback){
         let SQL = "SELECT * FROM programmes_tb ORDER BY id DESC"
         db.query(SQL, (err, result)=>{
