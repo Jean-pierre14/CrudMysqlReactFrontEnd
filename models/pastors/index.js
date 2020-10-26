@@ -9,7 +9,7 @@ class Pastors{
         })
     }
     static find(callback){
-        let SQL = "SELECT * FROM pastor_tb ORDER BY id DESC"
+        let SQL = "SELECT user_account.id,user_account.profile_pic, pastor_tb.user_id, pastor_tb.pastor_name, pastor_tb.create_at FROM user_account INNER JOIN pastor_tb ON user_account.id=pastor_tb.user_id ORDER BY pastor_tb.id DESC"
         db.query(SQL, (err, results)=>{
             if(err) throw err
             callback(results)

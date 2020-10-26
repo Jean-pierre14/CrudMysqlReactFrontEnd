@@ -3,7 +3,7 @@ const router = exp.Router()
 const Programmes = require('../models/programmes/')
 
 router.get('/', async (req, res)=>{
-    await Programmes.find((callback)=>{
+    await Programmes.findAll((callback)=>{
         res.json(callback)
     })
 })

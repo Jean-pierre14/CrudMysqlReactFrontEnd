@@ -46,7 +46,5 @@ router.delete('/delete', async (req, res)=>{
         res.json(result)
     })
 })
-// DeleteOne
-// DeleteAll
 
 module.exports = router

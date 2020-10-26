@@ -1,15 +1,8 @@
 const db = require('../')
 class Programmes{
     
-    static find(callback){
-        let SQL = "SELECT user_account.id, pastor_tb.pastor_name,pastor_tb.user_id, user_account.create_at FROM user_account INNER JOIN pastor_tb ON user_account.id=pastor_tb.user_id"
-        db.query(SQL, (err, result)=>{
-        if(err) throw err
-        callback(result)
-    })
-    }
     static findAll(callback){
-        let SQL = "SELECT * FROM programmes_tb ORDER BY id DESC"
+        let SQL = "SELECT user_account.id, user_account.username, user_account.profile_pic, programmes_tb.userId, programmes_tb.context, programmes_tb.title, programmes_tb.created_at FROM user_account INNER JOIN programmes_tb WHERE user_account.id=programmes_tb.userId ORDER BY programmes_tb.id DESC LIMIT 4"
         db.query(SQL, (err, result)=>{
             if(err) throw err
             callback(result)
