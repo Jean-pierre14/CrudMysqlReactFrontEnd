@@ -15,6 +15,27 @@ class Blog{
             callback(results)
         })
     }
+    static updateOne(id, context, callback){
+        let SQL = "UPDATE blog_tb SET context=? WHERE id=?"
+        db.query(SQL, [context, id], (err, result)=>{
+            if(err) throw err
+            callback(result)
+        })
+    }
+    static deleteOne(id, callback){
+        let SQL = "DELETE FROM blog_tb WHERE id = ?"
+        db.query(SQL, [id], (err, result)=>{
+            if(err) throw err
+            callback(result)
+        })
+    }
+    static deleteAll(id, callback){
+        let SQL = "DELETE FROM blog_tb"
+        db.query(SQL, [id], (err, result)=>{
+            if(err) throw err
+            callback(result)
+        })
+    }
 }
 
 module.exports = Blog
