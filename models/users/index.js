@@ -8,6 +8,13 @@ class User{
             cb(results)
         })
     }
+    static findOne(id, cb){
+        let SQL = "SELECT * FROM user_account WHERE id = ?"
+        db.query(SQL. [id], (err, result)=>{
+            if(err) throw err
+            cb(result)
+        })
+    }
 }
 
 module.exports = User

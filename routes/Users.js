@@ -8,4 +8,11 @@ router.get('/', (req, res)=>{
     })
 })
 
+router.get('/:id', (req, res)=>{
+    let id = req.params.id
+    User.findOne(id, (result)=>{
+        res.json(result)
+    })
+})
+
 module.exports = router
