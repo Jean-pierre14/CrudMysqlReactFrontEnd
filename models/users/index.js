@@ -15,6 +15,20 @@ class User{
             cb(result)
         })
     }
+    static updateOne(id, name,email,username,pass,location,status,gender,phone,department,dob,profile_pic,user_level,about, callback){
+        let SQL = "UPDATE user_account SET name=?,email=?,username=?,pass=?,location=?,status=?,gender=?,phone=?,department=?,dob=?,profile_pic=?,user_level=?,about=? WHERE id = ?"
+        db.query(SQL, [name,email,username,pass,location,status,gender,phone,department,dob,profile_pic,user_level,about, id], (err, result)=>{
+            if(err) throw err
+            callback(result)
+        })
+    }
+    static deleteOne(id, callback){
+        let SQL = "DELETE FROM user_account WHERE id = ?"
+        db.query(SQL, [id], (err, result)=>{
+            if(err) throw err
+            callback(result)
+        })
+    }
 }
 
 module.exports = User
