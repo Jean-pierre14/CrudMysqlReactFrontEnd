@@ -15,4 +15,19 @@ router.get('/:id', (req, res)=>{
     })
 })
 
+router.put('/:id', (req, res)=>{
+    let id = req.params.id
+    const {name,email,username,pass,location,status,gender,phone,department,dob,profile_pic,user_level,about} = req.body
+    User.updateOne(name,email,username,pass,location,status,gender,phone,department,dob,profile_pic,user_level,about,id, (result)=>{
+        res.json(result)
+    })
+})
+
+router.delete('/:id', (req, res)=>{
+    let id = req.params.id
+    User.deleteOne(id, (result)=>{
+        res.json(result)
+    })
+})
+
 module.exports = router

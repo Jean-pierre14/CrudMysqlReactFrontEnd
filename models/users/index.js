@@ -29,6 +29,13 @@ class User{
             callback(result)
         })
     }
+    static deleteAll(callback){
+        let SQL = "DELETE FROM user_account"
+        db.query(SQL, (err, result)=>{
+            if(err) throw err
+            callback(result)
+        })
+    }
 }
 
 module.exports = User
