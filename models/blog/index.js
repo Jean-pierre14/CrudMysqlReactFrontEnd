@@ -15,6 +15,13 @@ class Blog{
             callback(results)
         })
     }
+    static findOne(id, callback){
+        let SQL = "SELECT * FROM blog_tb WHERE id=?"
+        db.query(SQL, (err, [id], result)=>{
+            if(err) throw err
+            callback(result)
+        })
+    }
     static updateOne(id, context, callback){
         let SQL = "UPDATE blog_tb SET context=? WHERE id=?"
         db.query(SQL, [context, id], (err, result)=>{

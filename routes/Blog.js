@@ -8,6 +8,12 @@ router.get('/', (req, res)=>{
     })
 })
 
+router.get('/:id', (req, res)=>{
+    let id = req.params.id
+    Blog.findOne(id, (result)=>{
+        res.json(result)
+    })
+})
 router.post('/', (req, res)=>{
     const {user_id, context } = req.body
     if(!user_id || !context){
