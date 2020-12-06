@@ -8,6 +8,12 @@ router.get('/', async (req, res)=>{
     })
 })
 
+router.get('/all', async (req, res) => {
+    Programmes.find((cb) => {
+        res.json(cb)
+    })
+})
+
 router.post('/', async (req, res)=>{
     const {title,content,userId} = req.body
     await Programmes.create(title, content, userId, (programme) => {
