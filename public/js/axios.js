@@ -25,10 +25,12 @@ function postData() {
                 content,
                 userId
             }
-        }).then(res=> showData(res)).catch(err=>{console.log(err)})
+        }).then(res => showData(res)).catch(err => { console.log(err) })
+        document.getElementById('userID').value = ''
+        document.getElementById('title').value = ''
+        document.getElementById('content').value = ''
     }
 }
-
 
 function showData(res) {
     document.getElementById('results').innerHTML = `
