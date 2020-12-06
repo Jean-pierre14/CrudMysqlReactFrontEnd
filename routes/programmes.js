@@ -10,7 +10,7 @@ router.get('/', async (req, res)=>{
 
 router.post('/', async (req, res)=>{
     const {title,content,userId} = req.body
-    await Programmes.create(title, content, userId, (programme)=>{
+    await Programmes.create(title, content, userId, (programme) => {
         res.json(programme)
     })
 })

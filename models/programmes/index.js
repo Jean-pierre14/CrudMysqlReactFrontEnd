@@ -8,6 +8,13 @@ class Programmes{
             callback(result)
         })
     }
+    static find(callback){
+        let SQL = "SELECT user_account.id, user_account.username, user_account.profile_pic, programmes_tb.userId, programmes_tb.context, programmes_tb.title, programmes_tb.created_at FROM user_account INNER JOIN programmes_tb WHERE user_account.id=programmes_tb.userId ORDER BY programmes_tb.id DESC"
+        db.query(SQL, (err, result)=>{
+            if(err) throw err
+            callback(result)
+        })
+    }
     static deleteOne(id,callback){
         let SQL = "DELETE FROM programmes_tb WHERE id = ?"
         db.query(SQL, [id], (err, result)=>{

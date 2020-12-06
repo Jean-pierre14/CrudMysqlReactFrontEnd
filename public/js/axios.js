@@ -15,7 +15,7 @@ function postData() {
     let content = document.getElementById('content').value
 
     if (!userId || !title || !content) {
-        alert('all fields are required')
+        error.innerHTML = 'all fields are required'
     } else {
         axios({
             method: 'post',
@@ -34,11 +34,12 @@ function postData() {
 
 function showData(res) {
     document.getElementById('results').innerHTML = `
-        <div class="card my-3">
-            <h2>Status ${res.status}</h2>
+        <div class="card card-body my-3">
+            <h2>Status ${JSON.stringify(res.status)}</h2>
         </div>
         <div class="card card-body my-3">
             <pre><small>Status ${JSON.stringify(res.data, null, 2)}</small></pre>
         </div>
+
     `
 }
