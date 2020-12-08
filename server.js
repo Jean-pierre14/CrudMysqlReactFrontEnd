@@ -26,7 +26,7 @@ app.use('/users', Users)
 
 
 app.get('/', (req,res)=>{
-    res.json("Main endpoint /")
+    res.json("this the root backend of ERC we have /pastors, /programmes, /blog, /users")
 })
 app.use((req, res, next)=>{
     res.status(404).json({message: "Page not found"})
