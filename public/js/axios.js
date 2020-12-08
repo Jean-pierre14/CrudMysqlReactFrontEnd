@@ -32,9 +32,14 @@ function postData() {
     }
 }
 
+findAll()
 function findAll() {
-    axios.get('http://localhost:7000/programmes')
-    .then().catch(err=>console.error(err))
+    axios({
+        method: 'get',
+        url: 'http://localhost:7000/programmes/all'
+    })
+        .then(res => dataDisplayed(res))
+        .catch(err => console.error(err))
 }
 
 function showData(res) {
@@ -49,5 +54,17 @@ function showData(res) {
             <h3>config</h3>
             <pre><small>Status ${JSON.stringify(res.config, null, 2)}</small></pre>
         </div>
+    `
+}
+function dataDisplayed(res) {
+    document.getElementById('result-all').innerHTML = `
+    <div class="card">
+        <div class="card-header">
+            <h3>Programmes</h3>
+        </div>
+        <div class="card-body">
+            <pre>${JSON.stringify(res.data, null, 2)}</pre>
+        </div>
+    </div>
     `
 }
