@@ -1,7 +1,7 @@
 function getData() {
     axios({
         method: 'get',
-        url: 'http://localhost:5000/programmes'
+        url: 'http://localhost:7000/programmes'
     }).then(res => showData(res)).catch(err => { console.log(err) })
 }
 
@@ -19,7 +19,7 @@ function postData() {
     } else {
         axios({
             method: 'post',
-            url: 'http://localhost:5000/programmes',
+            url: 'http://localhost:7000/programmes',
             data: {
                 title,
                 content,
@@ -32,6 +32,11 @@ function postData() {
     }
 }
 
+function findAll() {
+    axios.get('http://localhost:7000/programmes')
+    .then().catch(err=>console.error(err))
+}
+
 function showData(res) {
     document.getElementById('results').innerHTML = `
         <div class="card card-body my-3">
@@ -40,6 +45,9 @@ function showData(res) {
         <div class="card card-body my-3">
             <pre><small>Status ${JSON.stringify(res.data, null, 2)}</small></pre>
         </div>
-
+        <div class="card card-body my-3">
+            <h3>config</h3>
+            <pre><small>Status ${JSON.stringify(res.config, null, 2)}</small></pre>
+        </div>
     `
 }
