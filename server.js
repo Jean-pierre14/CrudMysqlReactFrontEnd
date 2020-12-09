@@ -24,7 +24,6 @@ app.use('/pastors', PastorsEndpoint)
 app.use('/blog', blog)
 app.use('/users', Users)
 
-
 app.get('/', (req,res)=>{
     res.json("this the root backend of ERC we have /pastors, /programmes, /blog, /users")
 })
