@@ -36,7 +36,13 @@ class Programmes{
             callback(result)
         })
     }
-    
+    static CountAll(cb){
+        let SQL = "SELECT COUNT(id) AS countItem FROM programmes_tb"
+        db.query(SQL, (err, result)=>{
+            if(err) throw err
+            cb(result)
+        })
+    }
 }
 
 module.exports = Programmes

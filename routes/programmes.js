@@ -8,6 +8,14 @@ router.get('/', async (req, res)=>{
     })
 })
 
+// Dashboard
+router.get('/count', async (req, res)=>{
+    await Programmes.CountAll((cb)=>{
+        res.json(cb)
+    })
+})
+
+
 router.get('/all', async (req, res) => {
     Programmes.find((cb) => {
         res.json(cb)
