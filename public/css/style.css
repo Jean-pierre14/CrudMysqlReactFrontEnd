@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    font-family: roboto !important;
+    background-color: #fff;
+}
+.container{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.container form{
+    position: relative;
+    width: 90%;
+    margin: 10px auto;
+}
+
+.grid{
+    position: relative;
+    display: grid;
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+}
+
+.grid-3{
+    grid-template-columns: repeat(3, 1fr)
+}
+.grid-2{
+    grid-template-columns: repeat(2, 1fr)
+}

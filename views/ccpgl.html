@@ -4,11 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CCPGL</title>
+    <link rel="stylesheet" href="../public/css/style.css">
 </head>
 <body>
     <div class="container">
         <form action="">
-            
+            <span>Identite du candidat</span>
+            <div class="grid grid-3">
+                <div class="form success">
+                    <label for="name">Nom</label>
+                    <input type="text" placeholder="Entre votre nom" class="input">
+                </div>
+                <div class="form success">
+                    <label for="name">Nom</label>
+                    <input type="text" placeholder="Entre votre nom" class="input">
+                </div>
+                <div class="form success">
+                    <label for="name">Nom</label>
+                    <input type="text" placeholder="Entre votre nom" class="input">
+                </div>
+            </div>
+            <div class="grid grid-2">
+                <div>
+                    <span>Sex</span><br>
+                    <label for=""><input type="checkbox" name="sex" id="sex">Masculin</label>
+                    <label for=""><input type="checkbox" name="sex" id="sex">Feminin</label>
+                </div>
+                <div>
+                    <label for="matiere">Matiere choisie</label>
+                    <input type="text" name="matiere" id="matiere" placeholder="Votre matiere" class="input">
+                </div>
+            </div>
+            <div class="grid grid-3">
+                <div class="form success">
+                    <label for="debut">Debut de formation</label>
+                    <input type="date" name="debut" id="debut" class="input">
+                </div>
+                <div class="form error">
+                    <label for="fin">Fin de formation</label>
+                    <input type="date" name="fin" id="fin" class="input">
+                </div>
+                <div class="form error">
+                    <label for="jours">Jours de formation</label>
+                    <input type="text" name="jours" id="jours" placeholder="Les jours de formation" class="input">
+                </div>
+            </div>
+            <div class="grid grid-3">
+                <div class="form success">
+                    <label for="lang">Langue de transmission du cours</label>
+                    <input type="text" name="lang" id="lang" placeholder="Entre votre prefere" class="input">
+                </div>
+                <div class="form error">
+                    <label for="phones">Telephones</label>
+                    <input type="text" name="phone" placeholder="Telephones" id="phones" class="input">
+                </div>
+                <div class="form error">
+                    <label for="email">email</label>
+                    <input type="email" name="email" placeholder="email@ccpgl.org" id="email" class="input">
+                </div>
+            </div>
+            <div class="border-o">
+                <span>Si l'age est inferieur a 15ans; les informations de parent sont demandees</span>
+                <div class="grid grid-3">
+                    <div class="form success">
+                        <label for="parentname">Nom</label>
+                        <input type="text" name="parentname" placeholder="Entre les noms des parents" id="parentname" class="input">
+                    </div>
+                    <div class="form error">
+                        <label for="emailP">Email</label>
+                        <input type="email" name="emailP" placeholder="Entre les Emails des parents" id="emailP" class="input">
+                    </div>
+                    <div class="form success">
+                        <label for="phone">Numero de telephone</label>
+                        <input type="tel" name="phone" id="phone" placeholder="telephone" class="input">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="header">
+                    <label for="address">Address</label>
+                    <textarea name="address" id="address" placeholder="Address..." class="input"></textarea>
+                </div>
+            </div>
+            <div class="grid grid-4">
+                <div class="form error">
+                    <label for="montant">Montant a payer</label>
+                    <input type="number" name="montant" id="montant" placeholder="Montant a payer" class="input">
+                </div>
+                <div class="form error">
+                    <label for="frais">Frais d'enregistrement<input type="checkbox" name="frais" id="frais" class="input"></label>
+                </div>
+                <div class="form error">
+                    <span>Detail de payement</span>
+                    <label for="py"><input type="checkbox" name="py" value="moitie" id="py" class="input">Moitie</label>
+                    <label for="py"><input type="checkbox" name="py" value="totalite" id="py" class="input"></label>
+                </div>
+            </div>
         </form>
     </div>
 </body>
