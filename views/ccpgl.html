@@ -8,7 +8,10 @@
 </head>
 <body>
     <div class="container">
+        
         <form action="">
+            <h2 class="center pt mb">FICHE D'ENREGISTRMENT</h2>
+            <hr>
             <span>Identite du candidat</span>
             <div class="grid grid-3">
                 <div class="form success">
@@ -16,21 +19,21 @@
                     <input type="text" placeholder="Entre votre nom" class="input">
                 </div>
                 <div class="form success">
-                    <label for="name">Nom</label>
-                    <input type="text" placeholder="Entre votre nom" class="input">
+                    <label for="prenom">Prenom</label>
+                    <input type="text" id="prenom" placeholder="Entre votre nom" class="input">
                 </div>
-                <div class="form success">
-                    <label for="name">Nom</label>
-                    <input type="text" placeholder="Entre votre nom" class="input">
+                <div class="form error">
+                    <label for="name">Age</label>
+                    <input type="number" placeholder="Age" class="input">
                 </div>
             </div>
             <div class="grid grid-2">
                 <div>
                     <span>Sex</span><br>
-                    <label for=""><input type="checkbox" name="sex" id="sex">Masculin</label>
-                    <label for=""><input type="checkbox" name="sex" id="sex">Feminin</label>
+                    <label for=""><input type="checkbox" class="input" name="sex" id="sex">Masculin</label>
+                    <label for=""><input type="checkbox" class="input" name="sex" id="sex">Feminin</label>
                 </div>
-                <div>
+                <div class="form success">
                     <label for="matiere">Matiere choisie</label>
                     <input type="text" name="matiere" id="matiere" placeholder="Votre matiere" class="input">
                 </div>
@@ -83,22 +86,52 @@
             <div>
                 <div class="header">
                     <label for="address">Address</label>
-                    <textarea name="address" id="address" placeholder="Address..." class="input"></textarea>
                 </div>
+                <textarea name="address" id="address" placeholder="Address..." class="input"></textarea>
             </div>
-            <div class="grid grid-4">
+            <div class="grid grid-4 pt">
                 <div class="form error">
                     <label for="montant">Montant a payer</label>
                     <input type="number" name="montant" id="montant" placeholder="Montant a payer" class="input">
                 </div>
                 <div class="form error">
-                    <label for="frais">Frais d'enregistrement<input type="checkbox" name="frais" id="frais" class="input"></label>
+                    <label for="frais">Frais d'enregistrement<input type="checkbox" name="frais" id="frais"></label>
                 </div>
                 <div class="form error">
                     <span>Detail de payement</span>
-                    <label for="py"><input type="checkbox" name="py" value="moitie" id="py" class="input">Moitie</label>
-                    <label for="py"><input type="checkbox" name="py" value="totalite" id="py" class="input"></label>
+                    <label for="py"><input type="checkbox" name="py" value="moitie" id="py">Moitie</label>
                 </div>
+                <div class="form success">
+                    <label for="py"><input type="checkbox" name="py" value="totalite" id="py">Totalite</label>
+                </div>
+            </div>
+            <div>
+                <div class="header">
+                    <label for="address">Condition de partenariat</label>
+                </div>
+                <ul class="list">
+                    <li>
+                        <b>1</b>. 
+                        <span>
+                            Nous certifions que les informations ci-dessus sont correctes et vraie.
+                        </span>
+                    </li>
+                    <li>
+                        <b>2</b>. 
+                        <span>
+                            Nous certifions que les informations ci-dessus sont correctes et vraie.
+                        </span>
+                    </li>
+                    <li>
+                        <b>3</b>. 
+                        <span>
+                            Nous certifions que les informations ci-dessus sont correctes et vraie.
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="pt mb">
+                <button class="button" type="submit">Submit</button>
             </div>
         </form>
     </div>
