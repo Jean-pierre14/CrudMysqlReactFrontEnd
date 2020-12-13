@@ -1,7 +1,7 @@
 const form = document.getElementById('submit')
-const username = document.getElementById('username')
+const name = document.getElementById('name')
 const email = document.getElementById('email')
-const pass = document.getElementById('pass')
+const age = document.getElementById('age')
 
 form.addEventListener('submit', function (e) {
     e.preventDefault()
@@ -10,26 +10,24 @@ form.addEventListener('submit', function (e) {
 })
 
 function checkInputs() {
-    const userValue = username.value.trim()
+    const nameValue = username.value.trim()
     const emValue = email.value.trim()
-    const psValue = pass.value.trim()
+    const ageValue = age.value.trim()
 
     // Check the username
-    if (userValue === '') {
-        // Display error
-        // Add our error class
-        setErrorFor(username, 'Username is blank')
+    if (nameValue === '') {
+        setErrorFor(name, 'Nom est vide')
     } else {
-        setSuccessFor(username)
+        setSuccessFor(name)
     }
     if (emValue === '' || emValue === undefined) {
-        setErrorFor(email, "Email is blank")
+        setErrorFor(email, "Votre email")
     } else {
         setSuccessFor(email)
     }
 
-    if (psValue === '') {
-        setErrorFor(input, "Password is required")
+    if (ageValue === '') {
+        setErrorFor(input, "Age est invalid")
     } else {
         setSuccessFor(input)
     }
@@ -40,12 +38,12 @@ function setErrorFor(input, msg) {
     const small = group.querySelector('small')
     small.innerText = msg
     // add the class error
-    group.className = 'group error'
+    group.className = 'form error'
 }
 
 function setSuccessFor(input) {
     const group = input.parentElement
-    group.className = 'group success'
+    group.className = 'form success'
 }
 
 // check the email isEmail
