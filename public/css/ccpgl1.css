@@ -1,3 +1,6 @@
+:root{
+    --bg-glue: rgb(58,58,211)
+}
 *{
     margin: 0;
     padding: 0;
@@ -6,4 +9,38 @@
 
 body{
     font-family: roboto !important;
+}
+.header{
+    background-color: var(--bg-glue);
+    padding: 20px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.form-control{
+    outline: none !important;
+}
+.input{
+    outline: none;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 0;
+    border:2px solid var(--bg-glue);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top: 0;
+}
+
+.list{
+    border: 2px solid var(--bg-glue);
+    border:2px solid var(--bg-glue);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.btn-block{
+    position: relative;
+    width: 100%;
+}
+.box{
+    width: 100%;
 }
