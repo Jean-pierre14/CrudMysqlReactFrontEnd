@@ -32,22 +32,67 @@
                                       <input type="text" class="form-control" id="lastname">
                                     </div>
                                   </div>
+                                  <div class="form-group row m-1">
+                                    <label for="age" class="col-sm-3 col-form-label">Age</label>
+                                    <div class="col-sm-9">
+                                      <input type="number" class="form-control" id="age">
+                                    </div>
+                                  </div>
+                                  <div class="form-group row m-1">
+                                    <label for="age" class="col-sm-3 col-form-label">Gender</label>
+                                    <div class="col-sm-9">
+                                      <div class="d-flex py-1 justify-content-between align-items-center">
+                                          <span>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck" name="gender">
+                                                <label class="custom-control-label" for="customCheck">Male</label>
+                                              </div>
+                                          </span>
+                                          <span>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck" name="gender">
+                                                <label class="custom-control-label" for="customCheck">Female</label>
+                                              </div>
+                                          </span>
+                                      </div>
+                                    </div>
+                                  </div>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 p-1">
                             <div class="card card-body">
+                                <h2>Choices and details</h2>
                                 <div class="form-group row m-1">
-                                    <label for="staticEmail" class="col-sm-3 col-form-label">Email</label>
-                                    <div class="col-sm-9">
-                                      <input type="text" class="form-control" id="staticEmail">
+                                    <label for="staticEmail" class="col-sm-5 col-form-label">Selectel subject</label>
+                                    <div class="col-sm-7">
+                                        <select name="subject" class="form-control">
+                                            <option selected>Custom Select Menu</option>
+                                            <option value="Anglais">Anglais</option>
+                                            <option value="Francais">Francais</option>
+                                            <option value="Informatique">Informatique</option>
+                                            <option value="Programming">Programming</option>
+                                            <option value="Gym">Gym</option>
+                                            <option value="Karate">Karate</option>
+                                          </select>
                                     </div>
                                   </div>
                                   <div class="form-group row m-1">
-                                    <label for="inputPassword" class="col-sm-3 col-form-label">Password</label>
+                                    <label for="start" class="col-sm-3 col-form-label">start</label>
                                     <div class="col-sm-9">
-                                      <input type="password" class="form-control" id="inputPassword">
+                                      <input type="date" class="form-control" id="start">
                                     </div>
                                   </div>
+                                  <div class="form-group row m-1">
+                                    <label for="fin" class="col-sm-3 col-form-label">End</label>
+                                    <div class="col-sm-9">
+                                      <input type="date" class="form-control" id="fin">
+                                    </div>
+                                  </div>
+                                  <p class="p-0 m-0 text-center">
+                                      <b>
+                                        Days and hours of the hain
+                                      </b>
+                                  </p>
                             </div>
                         </div>
                     </div>
