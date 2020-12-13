@@ -27,41 +27,41 @@
                     <input type="number" placeholder="Age" class="input">
                 </div>
             </div>
-            <div class="grid grid-2">
+            <div class="grid grid-2 align-center">
                 <div>
                     <span>Sex</span><br>
-                    <label for=""><input type="checkbox" class="input" name="sex" id="sex">Masculin</label>
-                    <label for=""><input type="checkbox" class="input" name="sex" id="sex">Feminin</label>
+                    <label for="sex"><input type="checkbox" class="input" name="sex" value="Masculin" id="sex">Masculin</label>
+                    <label for="sex"><input type="checkbox" class="input" name="sex" value="Feminin" id="sex">Feminin</label>
                 </div>
-                <div class="form success">
+                <div class="form">
                     <label for="matiere">Matiere choisie</label>
                     <input type="text" name="matiere" id="matiere" placeholder="Votre matiere" class="input">
                 </div>
             </div>
             <div class="grid grid-3">
-                <div class="form success">
+                <div class="form">
                     <label for="debut">Debut de formation</label>
                     <input type="date" name="debut" id="debut" class="input">
                 </div>
-                <div class="form error">
+                <div class="form">
                     <label for="fin">Fin de formation</label>
                     <input type="date" name="fin" id="fin" class="input">
                 </div>
-                <div class="form error">
+                <div class="form">
                     <label for="jours">Jours de formation</label>
                     <input type="text" name="jours" id="jours" placeholder="Les jours de formation" class="input">
                 </div>
             </div>
             <div class="grid grid-3">
-                <div class="form success">
+                <div class="form">
                     <label for="lang">Langue de transmission du cours</label>
                     <input type="text" name="lang" id="lang" placeholder="Entre votre prefere" class="input">
                 </div>
-                <div class="form error">
+                <div class="form">
                     <label for="phones">Telephones</label>
                     <input type="text" name="phone" placeholder="Telephones" id="phones" class="input">
                 </div>
-                <div class="form error">
+                <div class="form">
                     <label for="email">email</label>
                     <input type="email" name="email" placeholder="email@ccpgl.org" id="email" class="input">
                 </div>
@@ -69,15 +69,15 @@
             <div class="border-o">
                 <span>Si l'age est inferieur a 15ans; les informations de parent sont demandees</span>
                 <div class="grid grid-3">
-                    <div class="form success">
+                    <div class="form">
                         <label for="parentname">Nom</label>
                         <input type="text" name="parentname" placeholder="Entre les noms des parents" id="parentname" class="input">
                     </div>
-                    <div class="form error">
+                    <div class="form">
                         <label for="emailP">Email</label>
                         <input type="email" name="emailP" placeholder="Entre les Emails des parents" id="emailP" class="input">
                     </div>
-                    <div class="form success">
+                    <div class="form">
                         <label for="phone">Numero de telephone</label>
                         <input type="tel" name="phone" id="phone" placeholder="telephone" class="input">
                     </div>
@@ -89,19 +89,19 @@
                 </div>
                 <textarea name="address" id="address" placeholder="Address..." class="input"></textarea>
             </div>
-            <div class="grid grid-4 pt">
-                <div class="form error">
+            <div class="grid grid-4 pt align-center">
+                <div class="form">
                     <label for="montant">Montant a payer</label>
                     <input type="number" name="montant" id="montant" placeholder="Montant a payer" class="input">
                 </div>
-                <div class="form error">
+                <div class="form">
                     <label for="frais">Frais d'enregistrement<input type="checkbox" name="frais" id="frais"></label>
                 </div>
-                <div class="form error">
+                <div class="form">
                     <span>Detail de payement</span>
                     <label for="py"><input type="checkbox" name="py" value="moitie" id="py">Moitie</label>
                 </div>
-                <div class="form success">
+                <div class="form">
                     <label for="py"><input type="checkbox" name="py" value="totalite" id="py">Totalite</label>
                 </div>
             </div>
@@ -131,7 +131,7 @@
                 </ul>
             </div>
             <div class="pt mb">
-                <button class="button" type="submit">Submit</button>
+                <button class="button" id="submit" type="button">Submit</button>
             </div>
         </form>
     </div>
