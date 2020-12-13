@@ -44,3 +44,11 @@ body{
 .box{
     width: 100%;
 }
+.list-2{
+    float: right;
+    position: relative;
+    list-style: none;
+}
+.list-2 li{
+    padding: 10px;
+}
