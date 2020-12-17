@@ -10,8 +10,9 @@ body{
 
 .cyrus-carousel{
     position: relative;
-    width: 90%;
-    margin: 50px auto;
+    display: block;
+    width: 88%;
+    margin: 90px auto;
 }
 
 .card-box{
@@ -29,4 +30,25 @@ body{
     height: 200px;
     overflow: hidden;
 }
+
+.content p{
+    text-align: justify;
+}
+
+.btn {
+    position: relative;
+    margin: 20px auto;
+    text-align: center;
+}
+.btn button{
+    text-align: center;
+    border: none !important;
+    border-radius: 4px;
+    outline: none !important;
+    background-color: rgb(52, 52, 202);
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
 
