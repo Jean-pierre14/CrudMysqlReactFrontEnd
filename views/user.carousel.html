@@ -4,15 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Users carousel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="../public/css/owl.carousel.css">
     <link rel="stylesheet" href="../public/css/owl.theme.default.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../public/js/owl.carousel.js"></script>
 </head>
 <body>
     <div class="wrapper">
-        <div class="owl-carousel">
+        <h3>Carousel</h3>
+        <div class="results owl-carousel owl-theme">
             <div id="results"></div>
         </div>
     </div>
+
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:90,
+            nav:true,
+            autoplay: true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:2
+                },
+                1000:{
+                    items:3
+                }
+            }
+        })
+    </script>
+
+    <script>
+        let output = ''
+        fetch('http://localhost:7000/users').then(res=>res.json()
+        .then(data =>{
+            if(data.length > 0){
+                // output += '<div class="owl-carousel owl-theme">'
+                data.forEach(item =>{
+                    output += `
+                        <div>
+                            ${item.username}
+                            </div>
+                    `
+                })
+                // output += '</div>'
+                document.getElementById('results').innerHTML = output
+            }else{
+                document.getElementById('results').innerHTML = '<p class="al">There no data</p>'
+            }
+        })).catch(err=>console.error(err))
+    </script>
 </body>
 </html>
