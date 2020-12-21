@@ -18,6 +18,7 @@
         <div class="owl-carousel owl-theme text-center">
             <div class="item">
                 <h4>one slide</h4>
+                <div id="result"></div>
             </div>
             <div class="item">
                 <h4>number two</h4>
@@ -57,7 +58,7 @@
 
     <script>
         let output = ''
-        fetch('http://localhost:7000/users').then(res=>res.json()
+        fetch('http://localhost:7000/users/4').then(res=>res.json()
         .then(data =>{
             if(data.length > 0){
                 // output += '<div class="owl-carousel owl-theme">'
@@ -69,7 +70,7 @@
                     `
                 })
                 // output += '</div>'
-                document.getElementById('results').innerHTML = output
+                document.getElementById('result').innerHTML = output
             }else{
                 document.getElementById('results').innerHTML = '<p class="al">There no data</p>'
             }
