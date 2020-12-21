@@ -4,17 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Users carousel</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="../public/css/owl.carousel.css">
     <link rel="stylesheet" href="../public/css/owl.theme.default.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../public/js/jquery-3.4.0.min.js"></script>
     <script src="../public/js/owl.carousel.js"></script>
 </head>
 <body>
     <div class="wrapper">
         <h3>Carousel</h3>
-        <div class="results owl-carousel owl-theme">
-            <div id="results"></div>
+        <div class="owl-carousel owl-theme text-center">
+            <div class="item">
+                <h4>one slide</h4>
+            </div>
+            <div class="item">
+                <h4>number two</h4>
+            </div>
+            <div class="item">
+                <h4>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis deleniti, quod sint nisi vero dolorum, voluptatem nostrum dicta natus ut quisquam laboriosam repudiandae illo. Recusandae voluptatum error asperiores eaque! Itaque!
+                </h4>
+            </div>
+            <div class="item">
+                <h4>
+                    combo-box
+                </h4>
+            </div>
         </div>
     </div>
 
@@ -48,7 +65,7 @@
                     output += `
                         <div>
                             ${item.username}
-                            </div>
+                        </div>
                     `
                 })
                 // output += '</div>'
